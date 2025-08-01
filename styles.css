@@ -1,0 +1,185 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Newsreader', Arial, sans-serif;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 100%;
+    z-index: 1000;
+    top: 0;
+    padding: 25px;
+    background-color: rgb(26, 26, 26);
+    box-shadow: 1px -2px 6px 0px #ffffff61;
+}
+
+#main-logo {
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+nav.main-nav {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+nav.secondary-nav {
+    width: 50%;
+    align-items: flex-end;
+}
+
+nav > a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    font-size: 0.96rem;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav.secondary-nav a:hover {
+    color: rgb(26, 26, 26);
+    background-color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 12px;
+    width: fit-content;
+    z-index: 1;
+}
+
+section {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.img-large {
+    width: 80vw;
+    height: 500px;
+    background-image: url(imgs/father6.png); background-position: top center;
+    background-color: white;
+    background-size: cover;
+    filter: grayscale(100%);
+    border-radius: 4px;
+    margin-top: 50px;
+}
+
+@media (min-width: 1180px) {
+    section {
+        flex-direction: row;
+        width: 95vw;
+    }
+
+    article#first-article {
+        flex-basis: 40%; /* ou o valor que você deseja */
+        width: 40%; /* junto com flex-basis para melhor compatibilidade */
+    }
+
+    article#second-article {
+        flex-basis: 40%;
+        width: 40%;
+    }
+
+    div.img-large {
+        width: 79vw;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 22px;
+    }
+}
+article#first-article {
+    border-radius: 4px;
+    background-image: url(imgs/father4.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 80vw;
+    max-width: 1014px;
+    filter: grayscale(100%);
+    height: 80dvh;
+}
+
+article#first-article > h1 {
+    position: relative;
+    font-size: 2.9rem;
+    font-weight: bolder;
+    color: white;
+    padding: 0.6em;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+article#second-article {
+    width: 80vw;
+    max-width: 1014px;
+    padding: 20px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+h2 {
+    color: rgb(254, 254, 254);
+    font-size: 1.9em;
+}
+
+p {
+    color: rgb(184, 184, 184);
+    font-size: 1.2rem;
+    padding-top: 14px;
+    text-indent: 1em;
+    line-height: 25px;
+    text-align: justify;
+}
+
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(18, 18, 18);
+    color: rgb(184, 184, 184);
+    padding: 15px;
+}
+
+footer p {
+    font-size: 1em;
+    padding: 0;
+    text-align: center;
+}
