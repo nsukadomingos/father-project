@@ -80,7 +80,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 12px;
+    margin-top: 20px;
     width: fit-content;
     z-index: 1;
 }
@@ -132,15 +132,16 @@ article#first-article > h1 {
     top: 50%;
     transform: translateY(-50%);
     font-variant: small-caps;
+    text-shadow: -1px 1px 20px #777777;
 }
 
-article#second-article {
+article.text-article {
     width: 90vw;
     max-width: 1014px;
-    padding: 13px;
+    padding: 10px;
     background-color: rgb(26, 26, 26);
     border-radius: 4px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 article#first-article > h2 {
@@ -181,6 +182,7 @@ aside p {
     font-size: 1em;
     line-height: 22px;
     text-indent: 0.5em;
+    text-wrap: nowrap;
 }
 
 aside a {
@@ -210,15 +212,14 @@ footer p {
     text-align: center;
 }
 
-    @media (min-width: 1180px) {
+    /*@media (min-width: 1180px) {
         section {
             flex-direction: row;
             width: 95vw;
         }
     
         article#first-article {
-            flex-basis: 40%; /* ou o valor que você deseja */
-            width: 40%; /* junto com flex-basis para melhor compatibilidade */
+            flex-basis: 40%; 
         }
     
         article#second-article {
@@ -245,7 +246,7 @@ footer p {
             height: 400px;
             margin-bottom: 20px;
         }
-    }
+    } */
 
     @media (max-width: 1300px) and (min-width: 1250px) {
         video.video-large {
