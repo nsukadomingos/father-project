@@ -12,10 +12,14 @@ html, body {
     background-color: rgb(26, 26, 26);
     color: white;
     width: 100%;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+div#content-meio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
 }
 
 header {
@@ -61,16 +65,20 @@ nav > a {
     transition: 0.3s;
 }
 
-nav.secondary-nav a:hover {
+nav a:hover {
+    color: white;
+}
+
+nav.secondary-nav > a:hover {
     color: rgb(26, 26, 26);
     background-color: white;
+    text-decoration: underline;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
     margin-top: 12px;
     width: fit-content;
     z-index: 1;
@@ -86,44 +94,22 @@ section {
 
 div.img-large {
     width: 80vw;
-    height: 500px;
+    height: 482px;
     background-image: url(imgs/father6.png); background-position: top center;
     background-color: white;
     background-size: cover;
     filter: grayscale(100%);
     border-radius: 4px;
-    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
-@media (min-width: 1180px) {
-    section {
-        flex-direction: row;
-        width: 95vw;
-    }
-
-    article#first-article {
-        flex-basis: 40%; /* ou o valor que você deseja */
-        width: 40%; /* junto com flex-basis para melhor compatibilidade */
-    }
-
-    article#second-article {
-        flex-basis: 40%;
-        width: 40%;
-    }
-
-    div.img-large {
-        width: 79vw;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 1.1rem;
-        line-height: 22px;
-    }
+video.video-large {
+    width: 80vw;
+    height: 521px;
+    border-radius: 4px;
 }
+
+
 article#first-article {
     border-radius: 4px;
     background-image: url(imgs/father4.png);
@@ -170,10 +156,39 @@ p {
     text-align: justify;
 }
 
+aside {
+    padding: 30px;
+    background-color: rgb(33 32 31 / 94%);
+}
+
+aside h3 {
+    color: rgb(254, 254, 254);
+    font-size: 1.5em;
+}
+
+aside p {
+    color: rgb(184, 184, 184);
+    font-size: 1em;
+    line-height: 22px;
+    text-indent: 0.5em;
+}
+
+aside a {
+    color: rgb(184, 184, 184);
+    text-decoration: none;
+    font-weight: bolder;
+    transition: 0.3s;
+}
+
+aside a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 footer {
     width: 100%;
     box-sizing: border-box;
-    background-color: rgb(18, 18, 18);
+    background-color: rgb(22, 21, 21);
     color: rgb(184, 184, 184);
     padding: 20px;
 }
@@ -181,5 +196,66 @@ footer {
 footer p {
     font-size: 1em;
     padding: 0;
+    text-indent: none;
     text-align: center;
 }
+
+    @media (min-width: 1180px) {
+        section {
+            flex-direction: row;
+            width: 95vw;
+        }
+    
+        article#first-article {
+            flex-basis: 40%; /* ou o valor que você deseja */
+            width: 40%; /* junto com flex-basis para melhor compatibilidade */
+        }
+    
+        article#second-article {
+            flex-basis: 40%;
+            width: 40%;
+        }
+    
+        div.img-large {
+            width: 79vw;
+        }
+    
+        h2 {
+            font-size: 2em;
+        }
+    
+        p {
+            font-size: 1.1rem;
+            line-height: 22px;
+        }
+
+        video.video-large {
+            margin-top: 20px;
+            width: 95vw;
+            height: 529px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 1300px) and (min-width: 1250px) {
+        video.video-large {
+            width: 95vw;
+            height: 559px;
+        }
+    }
+
+    @media (min-width: 1300px) {
+        video.video-large {
+            width: 95vw;
+            height: 600px;
+        }
+    }
+
+    @media (max-width: 330px) {
+        video.video-large {
+            margin-top: -170px;
+            p {
+                padding-top: 20px;
+            }
+        }
+    }
